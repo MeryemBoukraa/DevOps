@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import tn.esprit.spring.entities.User;
 import tn.esprit.spring.services.IUserService;
-
+//test error 
 // userRestControl
 @RestController // = @Controller + @ResponseBody 
 @RequestMapping("/user")
@@ -18,7 +18,7 @@ public class UserRestControl {
 	IUserService userService; 
 
 	
-	// URL : http://localhost:????/????/????/retrieve-all-users
+	// URL : http://localhost:????/????/????/retrieve-all-user
 	@GetMapping("/retrieve-all-users")
 	public List<User> retrieveAllUsers() {
 		return userService.retrieveAllUsers();

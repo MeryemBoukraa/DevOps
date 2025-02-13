@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - 3307:3306
+    volumes:
+      - db:/var/lib/mysql
+  app-timesheet:
+    depends_on:
+      - mysqldb
+    image: wafahidri/timesheet-devops:1.0.0
+    restart: unless-stopped
+    ports:
+      - 8082:8082
+volumes:
+  db : 
