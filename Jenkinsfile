@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('GIT') {
             steps {
-                git branch: 'main', url: 'https://github.com/YosrBenAmor/devops.git'
+                git branch: 'main', url: 'https://github.com/MeryemBoukraa/DevOps.git'
             }
         }
 
